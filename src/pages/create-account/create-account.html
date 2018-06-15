@@ -1,0 +1,42 @@
+<ion-content class="page-create-content" padding>
+
+  <div class="create-box">
+    <form #createForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+
+            <ion-item>
+              <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="newUser.Email" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="newUser.Password" required></ion-input>
+            </ion-item>
+            <!-- 
+            <ion-item>
+              <ion-input type="password" placeholder="Confirm Password" name="password" [(ngModel)]="confirmPassW" required></ion-input>
+            </ion-item> -->
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="create-col">
+          <button ion-button class="create-btn" full (click)="createAcc()" [disabled]="!createForm.form.valid">Create Account</button>
+          <button ion-button class="close-btn" full (click)="close()">Close</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </div>
+  <!-- <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <img src='/assets/imgs/partyHard.jpg' />
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row> -->
+
+</ion-content>

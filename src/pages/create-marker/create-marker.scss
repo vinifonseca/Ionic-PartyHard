@@ -1,0 +1,33 @@
+page-create-marker {
+    .scroll-content{
+        overflow-y: hidden;
+    }
+
+    .close-btn{
+        background: red !important;
+        border-radius: 30px !important;
+        font-size: 16px;
+       }
+
+       ion-select {
+        // margin-right: auto !important;
+        // margin-left: auto !important;
+    }
+
+    .information-input{
+        // height: 100px;
+    }
+
+    .create-btn{
+        background: rgb(47, 160, 2);
+        border-radius: 30px !important;
+        font-size: 16px;
+       }
+
+    .alert-danger{
+        color: red;
+        margin-top: 1%;
+        margin-left: 3%;
+    }
+    
+}

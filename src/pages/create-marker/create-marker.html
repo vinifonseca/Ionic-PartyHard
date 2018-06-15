@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="text-align: center">New Party</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-input #name="ngModel" minlength="6" type="text" placeholder="Name" name="name" [(ngModel)]="newmarker.name" required></ion-input>
+
+  </ion-item>
+  <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+    Minimum length is 6
+  </div>
+
+  <!-- 
+  <ion-item>
+    <ion-select interface="popover" [(ngModel)]="newmarker.PartyType">
+      <ion-option value="" selected disabled>Select your party style</ion-option>
+      <ion-option value="rock">Rock</ion-option>
+      <ion-option value="eletronic">Eletronic</ion-option>
+      <ion-option value="country">Country</ion-option>
+      <ion-option value="blues">Blues</ion-option>
+      <ion-option value="jazz">Jazz</ion-option>
+      <ion-option value="funk">Funk</ion-option>
+    </ion-select>
+  </ion-item> -->
+
+  <!-- <ion-list radio-group>
+    <ion-item>
+      <ion-label>Friends</ion-label>
+      <ion-radio value="friends" checked></ion-radio>
+    </ion-item>
+  </ion-list> -->
+
+  <ion-item>
+    <ion-input #description="ngModel" minlength="20" class="information-input" type="text" placeholder="Informations" [(ngModel)]="newmarker.description"
+      name="name"></ion-input>
+  </ion-item>
+  <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+    Minimum length is 20
+  </div>
+
+  <ion-row>
+    <ion-col class="create-col">
+      <button ion-button class="create-btn" full (click)="createMarker()">Create Party</button>
+      <button ion-button class="close-btn" full (click)="close()">Close</button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
